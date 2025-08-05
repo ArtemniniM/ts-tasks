@@ -641,3 +641,103 @@
 
 // const res = products.reduce((sum, elem) => sum + elem.quantity * elem.price, 0);
 // console.log(res);
+
+// !!!!!!!!!!!!!!!!!!!!!HOMEWORK
+
+// interface User {
+//     id: number;
+//     name: string;
+//     isActive: boolean;
+//   }
+//   const users: User[] = [
+//     { id: 1, name: "Alice", isActive: true },
+//     { id: 2, name: "Bob", isActive: false },
+//     { id: 3, name: "Charlie", isActive: true },
+//     { id: 4, name: "Diana", isActive: false },
+//   ];
+
+//   1. Отфильтруй массив users, чтобы получить только активных пользователей.
+// const result: User[] = users.filter((el) => el.isActive === true);
+// console.log(result);
+
+// 2.Преобразуй массив users в массив строк из имён пользователей.
+// const names: string[] = users.map((el) => el.name);
+// console.log(names);
+
+// 3. Проверь, есть ли хотя бы один неактивный пользователь. Если есть - true, иначе - false
+// const inactive: boolean = users.some((el) => el.isActive === false);
+// console.log(inactive);
+
+// 4. Из массива students отфильтруй только тех, у кого балл выше 80.
+// interface User {
+//   id: number;
+//   name: string;
+//   score: number;
+// }
+// const students: User[] = [
+//   { id: 1, name: "Anna", score: 75 },
+//   { id: 2, name: "John", score: 92 },
+//   { id: 3, name: "Tom", score: 88 },
+// ];
+// const ball: User[] = students.filter((el) => el.score > 80);
+// console.log(ball);
+
+// 5. Отобрази список имён всех курсов, которые проходят пользователи. Курсы находятся внутри каждого пользователя в массиве courses.
+// Результат: ['TS', 'React', 'Node', 'TS', 'HTML'].
+// interface User {
+//   id: number;
+//   name: string;
+//   courses: string[];
+// }
+// const users:User[] = [
+//   { id: 1, name: "Alice", courses: ["TS", "React"] },
+//   { id: 2, name: "Bob", courses: ["Node", "TS"] },
+//   { id: 3, name: "Clara", courses: ["HTML"] },
+// ];
+
+// const courses:string[] = users.map((el) => el.courses).flat();
+// console.log(courses);
+
+// 6. Из массива projects получи список названий только тех проектов, в которых участвует пользователь с userId === 3.
+// interface User {
+//   id: number;
+//   name: string;
+//   members: number[];
+// }
+// const projects: User[] = [
+//   { id: 1, name: "CRM", members: [1, 2, 3] },
+//   { id: 2, name: "Landing Page", members: [2] },
+//   { id: 3, name: "Mobile App", members: [3, 4] },
+// ];
+
+// const list: string[] = projects.filter((el) => el.members.includes(3)).map((us) => us.name);
+// console.log(list);
+
+// 7. В массиве events найди все записи, которые происходят в 2023 году.
+// Результат:  ["Conference", "Workshop"]
+// interface User {
+//   id: number;
+//   name: string;
+//   date: string;
+// }
+// const events: User[] = [
+//   { id: 1, name: "Conference", date: "2023-05-01" },
+//   { id: 2, name: "Workshop", date: "2023-11-15" },
+//   { id: 3, name: "Webinar", date: "2025-01-20" },
+// ];
+// const filt: string[] = events.filter((el) => el.date.includes("2023")).map((el) => el.name);
+// console.log(filt);
+
+// 8. Для массива teams получи имена всех участников всех команд, но без повторений.
+// Результат:  ['Alice', 'Bob', 'Clara', 'Dave']
+// interface User {
+//   id: number;
+//   members: string[];
+// }
+// const teams: User[] = [
+//   { id: 1, members: ["Alice", "Bob"] },
+//   { id: 2, members: ["Bob", "Clara"] },
+//   { id: 3, members: ["Dave", "Alice"] },
+// ];
+// const filt: string[] = [...new Set(teams.map((el) => el.members).flat())];
+// console.log(filt);
