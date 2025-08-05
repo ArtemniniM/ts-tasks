@@ -111,12 +111,61 @@
 // num2.
 // Входные: num1 = 15, num2 = 25 → Результат: "НОД: 5"
 // Входные: num1 = 14, num2 = 28 → Результат: "НОД: 14"
-const num1 = 14;
-const num2 = 28;
-let res = 0;
-for (let i = 0; i <= num1; i++) {
-    if (num1 % i === 0 && num2 % i === 0) {
-        res = i;
+// const num1: number = 14;
+// const num2: number = 28;
+// let res: number = 0;
+// for (let i = 0; i <= num1; i++) {
+//   if (num1 % i === 0 && num2 % i === 0) {
+//     res = i;
+//   }
+// }
+// console.log(res);
+// 11.Напишите программу, которая проверяет, начинается ли строка str с гласной буквы. Гласными
+// считаются: a, e, i, o, u. Выведите результат в консоль.
+// Входные: str = "apple" → Результат: "Строка начинается с гласной"
+// Входные: str = "banana" → Результат: "Строка не начинается с гласной"
+// const str: string = "apple";
+// const vowels: string[] = ["a", "e", "i", "o", "u"];
+// const strSpl: string[] = str.split("");
+// if (vowels.includes(strSpl[0])) {
+//   console.log("Строка начинается с гласной");
+// } else {
+//   console.log("Строка не начинается с гласной");
+// }
+// 12. Напишите программу, которая проверяет, можно ли строку str разделить на две части таким
+// образом, чтобы количество уникальных символов в обеих частях было одинаковым. Если
+// возможно, выведите "Можно", иначе "Нельзя".
+// Входные: str = "aabbcc" → Результат: "Можно"
+// Входные: str = "abcabc" → Результат: "Нельзя"
+// const str: string = "apple";
+// let canSplit: boolean = false;
+// for (let i = 1; i < str.length; i++) {
+//   const left = str.slice(0, i);
+//   const right = str.slice(i);
+//   const resLeft = new Set(left).size;
+//   const resRight = new Set(right).size;
+//   if (resLeft === resRight) {
+//     canSplit = true;
+//     break;
+//   }
+// }
+// console.log(canSplit ? "Можно" : "Нельзя");
+// 13. Напишите программу, которая проверяет, можно ли заданное число num представить в виде
+// произведения двух последовательных целых чисел. Если возможно, выведите эти числа, иначе
+// выведите "Невозможно".
+// Входные: num = 20 → Результат: "4 * 5 = 20"
+// Входные: num = 30 → Результат: "Невозможно"
+// Входные: num = 42 → Результат: "6 * 7 = 42"
+const num = 28;
+let flag = false;
+for (let i = 1; i < num; i++) {
+    const next = i + 1;
+    if (i * next === num) {
+        console.log(`${i} * ${next} = ${num}`);
+        flag = true;
+        break;
     }
 }
-console.log(res);
+if (!flag) {
+    console.log("Невозможно");
+}
