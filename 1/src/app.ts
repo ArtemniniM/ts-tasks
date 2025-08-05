@@ -214,4 +214,37 @@
 // Входные: str = "ivicc" → Результат: "Можно"
 // Входные: str = "hello" → Результат: "Нельзя"
 
-const str: string = "civic";
+// const str: string = "hello";
+// const oddSet = new Set<string>();
+
+// for (const char of str) {
+//   if (oddSet.has(char)) {
+//     oddSet.delete(char);
+//   } else {
+//     oddSet.add(char);
+//   }
+// }
+// const result = oddSet.size <= 1 ? "Можно" : "Нельзя";
+// console.log(result);
+
+// 15.Напишите программу,s которая проверяет, можно ли число num разделить на две части так, чтобы
+// сумма цифр в этих частях была одинаковой. Если возможно, выведите "Можно", иначе "Нельзя".
+// Входные: num = 123321 → Результат: "Можно"
+// Входные: num = 123456 → Результат: "Нельзя"
+// Входные: num = 1221 → Результат: "Можно"
+
+// const num: number = 123321;
+// const digits: number[] = num.toString().split("").map(Number);
+// let result = "Нельзя";
+
+// for (let i = 1; i < digits.length; i++) {
+//   const leftSum = digits.slice(0, i).reduce((a, b) => a + b, 0);
+//   const rightSum = digits.slice(i).reduce((a, b) => a + b, 0);
+
+//   if (leftSum === rightSum) {
+//     result = "Можно";
+//     break;
+//   }
+// }
+
+// console.log(result);
