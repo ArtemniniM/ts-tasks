@@ -150,7 +150,174 @@
 // }
 // const res: string[] = arr.map((el) => (el % 2 === 0 ? "чет" : "нечет"));
 // console.log(res);
-// 14.
+// 14. Напишите программу, которая находит и выводит наиболее часто встречающийся
+// символ в заданной строке.
+// const str: string = "hschool";
+// const obj: any = {};
+// let count: number = 0;
+// let value: string = "";
+// for (let key in obj) {
+//   if (obj[key] > count) {
+//     count = obj[key];
+//     value = key;
+//   }
+// }
+// console.log(value);
+// !!!!!!!!!!!!!!!!!!!!!!!!!HOMEWORK
+// 1.Преобразовать все строки в верхний регистр
+// Необходимо 3 решения: for, for of, map
+// const words = ['hello', 'world'];
+// // Ожидается: ['HELLO', 'WORLD']
+// const words: string[] = ["hello", "world"];
+// const res: string[] = [];
+// for (let elem of words) {
+//   res.push(elem.toUpperCase());
+// }
+// console.log(res);
+// const res: string[] = [];
+// for (let i = 0; i < words.length; i++) {
+//   res.push(words[i].toUpperCase());
+// }
+// console.log(res);
+// const res: string[] = words.map((el) => el.toUpperCase());
+// console.log(res);
+// 2.Найти строку с максимальной длиной
+// Необходимо 3 решения: for, forEach, reduce
+// const words = ['pen', 'notebook', 'book', 'dictionary'];
+// Ожидается: 'dictionary'
+// const words: string[] = ["pen", "notebook", "book", "dictionary"];
+// const maxWord: string = words.reduce((longest, curr) => (curr.length > longest.length ? curr : longest));
+// console.log(maxWord);
+// let maxWord: string = words[0];
+// words.forEach((word) => {
+//   if (word.length > maxWord.length) {
+//     maxWord = word;
+//   }
+// });
+// console.log(maxWord);
+// let maxWord: string = words[0];
+// for (let i = 1; i < words.length; i++) {
+//   if (words[i].length > maxWord.length) {
+//     maxWord = words[i];
+//   }
+// }
+// console.log(maxWord);
+// 3.Подсчитать количество строк, содержащих букву “e”
+// Необходимо 3 решения: for, while, и через filter и length
+// const words = ['tree', 'bush', 'flower', 'grass'];
+// // Ожидается: 2
+// const words: string[] = ["tree", "bush", "flower", "grass"];
+// const count = words.filter((el) => el.includes("e")).length;
+// console.log(count);
+// let count: number = 0;
+// let i: number = 0;
+// while (i < words.length) {
+//   if (words[i].includes("e")) {
+//     count++;
+//   }
+//   i++;
+// }
+// console.log(count);
+// let count: number = 0;
+// for (let i: number = 0; i < words.length; i++) {
+//   if (words[i].includes("e")) {
+//     count++;
+//   }
+// }
+// console.log(count);
+// 4.Проверить, содержит ли массив хотя бы один палиндром
+// Необходимо 6 решений: for, for of, while, do while, forEach, some
+// const words = ['hello', 'level', 'world'];
+// // Ожидается: true
+// const words: string[] = ["hello", "level", "world"];
+// const result: boolean = words.some((word) => word === word.split("").reverse().join(""));
+// console.log(result);
+// let flag: boolean = false;
+// words.forEach((word) => {
+//   if (word === word.split("").reverse().join("")) {
+//     flag = true;
+//   }
+// });
+// console.log(flag);
+// let flag: boolean = false;
+// let i: number = 0;
+// do {
+//   const word = words[i];
+//   if (word === word.split("").reverse().join("")) {
+//     flag = true;
+//     break;
+//   }
+//   i++;
+// } while (i < words.length);
+// console.log(flag);
+// let flag: boolean = false;
+// let i: number = 0;
+// while (i < words.length) {
+//   const word = words[i];
+//   if (word === word.split("").reverse().join("")) {
+//     flag = true;
+//     break;
+//   }
+//   i++;
+// }
+// console.log(flag);
+// let flag: boolean = false;
+// for (let word of words) {
+//   if (word === word.split("").reverse().join("")) {
+//     flag = true;
+//     break;
+//   }
+// }
+// console.log(flag);
+// let flag:boolean = false;
+// for (let i:number = 0; i < words.length; i++) {
+//   const word = words[i];
+//   if (word === word.split("").reverse().join("")) {
+//
+//     flag = true;
+//     break;
+//   }
+// }
+// console.log(flag);
+// 5.Найти сумму квадратов только положительных чисел
+// Необходимо 5 решений: for, for of, while, do while, forEach
+// const nums = [-3, 2, -1, 4];
+const nums = [-3, 2, -1, 4];
+let sum = 0;
+nums.forEach((el) => (el > 0 ? (sum += el ** 2) : null));
+console.log(sum);
+// let i: number = 0;
+// do {
+//   if (nums[i] > 0) {
+//     sum += nums[i] ** 2;
+//   }
+//   i++;
+// } while (i < nums.length);
+// console.log(sum);
+// let sum: number = 0;
+// let i: number = 0;
+// while (i < nums.length) {
+//   if (nums[i] > 0) {
+//     sum += nums[i] ** 2;
+//   }
+//   i++;
+// }
+// console.log(sum);
+// let sum: number = 0;
+// for (let digit of nums) {
+//   if (digit > 0) {
+//     sum += digit ** 2;
+//   }
+// }
+// console.log(sum);
+// let sum: number = 0;
+// for (let i: number = 0; i < nums.length; i++) {
+//   if (nums[i] > 0) {
+//     sum += nums[i] ** 2;
+//   }
+// }
+// console.log(sum);
+// Ожидается: 2² + 4² = 4 + 16 = 20
 // 15. На входе динамичный массив строк. Используя forEach создайте новый массив из
 // элементов, каждое значение которого имеет вид !name
 // [“hschool”, “company”] -> [“!hschool”, “!company”]
