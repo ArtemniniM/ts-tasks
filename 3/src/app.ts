@@ -213,3 +213,4 @@
 // const res2 = (fun(1) as any)(2);
 // console.log(res1);
 // console.log(res2);
+
